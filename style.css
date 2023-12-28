@@ -1,0 +1,176 @@
+/* universal selector */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+html::-webkit-scrollbar{
+    display: none;
+}
+:root{
+    --shado:13px 13px 0px #7b7b7b,
+    -13px -13px 0px #ffffff;;
+}
+/* body Adjustment */
+body{
+    background: crimson;
+}
+
+/* homepage styling */
+section{
+    margin: 100px auto;
+    width: 500px;
+    position: relative;
+    padding-top: 35px;
+}
+img.logo{
+    width: 175px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.inputs{
+    border-radius: 11px;
+    background: #ededed;
+    box-shadow:  var(--shado);
+    padding: 10vh 3vw;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.inputs input{
+    font-size: large;
+    padding-top:10px;
+    margin-bottom: 20px;
+    width: 100%;
+    background: #ededed;
+    border: 0;
+    border-bottom: 1px solid #222;
+    font-weight: 200;
+    text-indent: 10px;
+}
+.inputs input:focus{
+    outline: 0;
+}
+.inputs input#dob{
+    width: 10vw;
+}
+p.nameErr,
+.emailErr{
+    background-color: red;
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: small;
+    animation: flick 1s infinite;
+    display: none;
+}
+@keyframes flick {
+    0%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#login{
+    border: 0;
+    padding: 1vh 5vw;
+    width: fit-content;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid #aa2926;
+    background: #ededed;
+    transition: all .3s;
+}
+#login:hover{
+    background-color: #aa2926;
+    color: #fff;
+}
+/* end of homepage styling */
+/* loader */
+img#loader{
+    display: block;
+    margin: 40vh auto;
+    width: 100px;
+}
+/* end of loader */
+/* index html... */
+.app{
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 11px;
+    background: #ededed;
+    box-shadow:  var(--shado);
+}
+.app h1{
+    font-size: 25px;
+    color: crimson;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size: 18px;
+    color: crimson;
+    font-weight: 600;
+}
+  /* option buttons */
+.btn{
+    background: #ededed;
+    color: #222;
+    font-weight: 600;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 4px;
+    transition: all .3s;
+}
+/* hover for buttons that are 'not' disabled */
+.btn:hover:not(:disabled){
+    background: #222;
+    color: #fff;
+}
+/* styling for disabled buttons */
+.btn:disabled{
+    cursor: no-drop;
+}
+/* next/Play Again button */
+#next-btn{
+    background: #aa2926;
+    color: #fff;
+    font-weight: 600;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+/* styling for the inputted classes thru js */
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
+}/*end of index */
